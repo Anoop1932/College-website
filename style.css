@@ -1,6 +1,42 @@
 *{
     margin: 0;
     padding: 0;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
     box-sizing: border-box;
+}
+
+
+li {
+  position: relative;
+  
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+li:hover {
+  color: rgb(0, 0, 161);
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1.5px;
+  background: blue;
+  transition: 0.3s;
+}
+
+li:hover::after {
+  width: 100%;
+}
+
+
+.banner{
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
 }
