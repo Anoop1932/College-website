@@ -28,3 +28,19 @@ setInterval(() => {
   })
 
 }, 4000); 
+
+
+gsap.from(".banner",{
+  y:-10,
+  opacity:0,
+  duration:1
+  
+
+})
+gsap.from(".section-1",{
+  opacity:0,
+  duration:1,
+  delay:0.2
+  
+
+})

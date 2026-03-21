@@ -16,10 +16,6 @@ li {
   transition: 0.3s;
 }
 
-li:hover {
-  color: rgb(0, 0, 161);
-}
-
 li::after {
   content: "";
   position: absolute;
@@ -27,7 +23,7 @@ li::after {
   bottom: 0;
   width: 0%;
   height: 1.5px;
-  background: blue;
+  background: rgb(255, 208, 0);
   transition: 0.3s;
 }
 
@@ -36,7 +32,7 @@ li:hover::after {
 }
 
 
-.banner{
-    background: rgba(255, 255, 255, 0.7);
+/* .banner{
+    background: rgba(255, 255, 255, 0.553);
     backdrop-filter: blur(8px);
-}
+} */
