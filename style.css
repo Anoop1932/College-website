@@ -37,3 +37,13 @@ li:hover::after {
     backdrop-filter: blur(8px);
     color: rgb(0, 0, 174);
 }
+
+
+
+#left-card,
+#center-card,
+#right-card1,
+#right-card2,
+#page3 img {
+  will-change: transform, opacity;
+}

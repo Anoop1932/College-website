@@ -66,7 +66,7 @@ and industry exposure to help students achieve their dreams and build a successf
         </div>
     </div>
     
-    <section id="page2" class="py-[80px] px-[20px] bg-gray-100">
+    <section id="page2" class="py-[80px] px-[20px] bg-gray-100 overflow-hidden">
   <div class="max-w-[1200px] mx-auto">
 
     <!-- Heading -->
@@ -128,55 +128,54 @@ and industry exposure to help students achieve their dreams and build a successf
 </section>
 
     
-<div style="width:100%; background: linear-gradient(135deg, #f8d36a, #f4b942); padding: 60px 0; font-family: 'Segoe UI', sans-serif;">
-  
-  <div style="max-width:1100px; margin:auto; display:flex; align-items:center; gap:50px; flex-wrap:wrap; padding: 20px;">
+<section id="page3" class="w-full bg-gradient-to-br from-yellow-300 to-yellow-400 py-16 font-sans overflow-hidden">
+
+  <div class="max-w-6xl mx-auto flex flex-wrap items-center gap-12 px-6">
     
     <!-- Left Image -->
-    <div style="flex:1; min-width:260px; text-align:center;">
+    <div class="flex-1 min-w-[260px] flex justify-center">
       <img src="images/Director.jpg" alt="Director"
-           style="width:260px; height:260px; object-fit:cover; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.2);">
+        class="w-[260px] h-[260px] object-cover rounded-2xl shadow-xl 
+        transition duration-500 hover:scale-105 block">
     </div>
 
     <!-- Right Content -->
-    <div style="flex:2; min-width:300px; color:#222;">
+    <div class="flex-[2] min-w-[300px] text-gray-800">
       
       <!-- Quote -->
-      <p style="font-size:22px; line-height:1.6; margin-bottom:25px; font-style:italic;">
+      <p class="text-xl leading-relaxed mb-6 italic">
         “Our institution is committed to excellence, innovation, and shaping future leaders. 
         We believe in empowering students with knowledge, skills, and values to succeed globally.”
       </p>
 
       <!-- Name -->
-      <h2 style="margin:0; font-size:26px; font-weight:600;">
+      <h2 class="text-2xl font-semibold">
         Dr. Aashish Arora
       </h2>
 
       <!-- Designation -->
-      <p style="margin:5px 0 15px; font-size:16px; color:#333;">
+      <p class="mt-1 mb-4 text-gray-700">
         Director, IKGPTU Amritsar Campus
       </p>
 
       <!-- Divider -->
-      <div style="width:60px; height:4px; background:#222; margin:15px 0;"></div>
+      <div class="w-16 h-1 bg-gray-900 mb-5 rounded transition-all duration-300"></div>
 
-      <!-- Optional Button -->
-      <a href="#" style="
-        display:inline-block;
-        padding:10px 22px;
-        background:#222;
-        color:#fff;
-        text-decoration:none;
-        border-radius:6px;
-        font-size:14px;
-        transition:0.3s;
-      " onmouseover="this.style.background='#000'" onmouseout="this.style.background='#222'">
+      <!-- Button -->
+      <a href="#"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white 
+        rounded-lg text-sm transition duration-300 
+        hover:bg-black hover:shadow-lg hover:-translate-y-1">
+
         Read More
+        <span class="transition duration-300 group-hover:translate-x-1">→</span>
+
       </a>
 
     </div>
+
   </div>
-</div>
+</section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 

@@ -112,39 +112,18 @@ window.addEventListener("scroll", function () {
 
 
 
-gsap.from("#left-card", {
-  y: 100,
+gsap.from("#left-card, #center-card,#right-card1, #right-card2 ", {
+  y: 110,
   opacity: 0,
   scrollTrigger: {
-    trigger: "#left-card",
-    start: "top 90%",
-    end: "top 60%",
+    trigger: "#page2",
+    start: "top 80%",
+    end: "top 50%",
     scrub: 1
   }
 });
 
-gsap.from("#center-card", {
-  y: 80,
-  opacity: 0,
-  scale: 0.9,
-  duration: 1,
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: "#center-card",
-    start: "top 90%"
-  }
-});
 
-gsap.from("#right-card1, #right-card2", {
-  y: 20,
-  opacity: 0,
-  duration: 1,
-  ease: "power2.out",
-  scrollTrigger: {
-    trigger: "#page2",
-    start: "top 90%"
-  }
-});
 
 gsap.from("#page2 h1", {
   y: 40,
@@ -164,6 +143,32 @@ gsap.from("#page2 p", {
   delay: 0.2,
   scrollTrigger: {
     trigger: "#page2",
+    start: "top 85%",
+    end:"top 60%"
+  }
+});
+
+gsap.from("#page3 img", {
+  y: 8,
+  duration:0.5,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: "#page3 img",
+    start: "top 90%",
+    end: "top 80%",
+    scrub: 1,
+    ease:"power2.out"
+  }
+});
+
+gsap.from("#page3 h2, #page3 p", {
+  y: 40,
+  opacity: 0,
+  duration: 1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#page3",
     start: "top 85%"
   }
 });
+
