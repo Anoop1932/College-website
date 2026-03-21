@@ -32,7 +32,8 @@ li:hover::after {
 }
 
 
-/* .banner{
-    background: rgba(255, 255, 255, 0.553);
+.slider{
+    background: rgba(255, 255, 255, 0.776);
     backdrop-filter: blur(8px);
-} */
+    color: rgb(0, 0, 174);
+}

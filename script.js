@@ -1,6 +1,10 @@
 let index = 0;
 const slider = document.getElementById("slider");
 const totalSlides = slider.children.length;
+const nav = document.querySelector(".banner");
+const h1 = document.querySelector(".banner h2");
+const li = document.querySelectorAll("li");
+gsap.registerPlugin(ScrollTrigger);
 
 setInterval(() => {
   index++;
@@ -46,20 +50,120 @@ gsap.from(".section-1",{
 })
 
 gsap.from("#text-cont h1",{
-  y:10,
+  y:14,
   opacity:0,
   duration:1,
-  stagger:0.2,
-  delay:0.5
+  stagger:0.1,
+  delay:0.7
   
 
 })
 gsap.from("#text-cont p",{
-  y:10,
+  y:14,
   opacity:0,
   duration:1,
-  stagger:0.2,
-  delay:0.5
+  stagger:0.1,
+  delay:0.7
   
 
 })
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 50) {
+    gsap.to(nav, {
+  backgroundColor: "rgba(255,255,255,0.8)",
+  backdropFilter: "blur(10px)",
+  duration: 0.3
+});
+    gsap.to(h1 , {
+      color:"blue",
+      duration:0.3,
+      stagger:0.2,
+      ease:"power2.out"
+    })
+
+    li.forEach(element => {
+      gsap.to(li , {
+        color:"blue",
+        duration:0.1,
+        stagger:0.1
+      })
+    });
+
+  } else {
+    gsap.to(nav, {
+      backgroundColor: "transparent",
+      backdropFilter: "blur(0px)",
+      duration: 0.3
+    });
+
+    gsap.to(h1, {
+      color: "white",
+      duration: 0.3
+    });
+
+    gsap.to(li, {
+      color: "white",
+      duration: 0.1,
+      stagger: 0.1
+    });
+  }
+});
+
+
+
+gsap.from("#left-card", {
+  y: 100,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: "#left-card",
+    start: "top 90%",
+    end: "top 60%",
+    scrub: 1
+  }
+});
+
+gsap.from("#center-card", {
+  y: 80,
+  opacity: 0,
+  scale: 0.9,
+  duration: 1,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: "#center-card",
+    start: "top 90%"
+  }
+});
+
+gsap.from("#right-card1, #right-card2", {
+  y: 20,
+  opacity: 0,
+  duration: 1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#page2",
+    start: "top 90%"
+  }
+});
+
+gsap.from("#page2 h1", {
+  y: 40,
+  opacity: 0,
+  duration: 1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#page2",
+    start: "top 85%"
+  }
+});
+
+gsap.from("#page2 p", {
+  y: 20,
+  opacity: 0,
+  duration: 1,
+  delay: 0.2,
+  scrollTrigger: {
+    trigger: "#page2",
+    start: "top 85%"
+  }
+});

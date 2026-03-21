@@ -12,17 +12,17 @@
 </head>
 
 <body>
-    <div class="section-1 h-screen w-full relative overflow-hidden bg-black">
+    <div class="section-1 h-screen w-full relative overflow-hidden px-15">
         <div id="slider" class="flex transition-transform duration-500 h-full w-full absolute ">
             <img src="images/clg_img.jpg" class="w-full h-full object-cover flex-shrink-0 ">
             <img src="images/clg_img2.webp" class="w-full h-full object-cover flex-shrink-0 ">
             <img src="images/clg_img3.jpg" class="w-full h-full object-cover flex-shrink-0 ">
     </div>
     <div class="absolute inset-0 bg-black/55"></div>
-        <div class="banner h-[88px] w-full absolute top-0 flex items-center justify-around gap-30 px-15 py-10 fixed">
+        <div class="banner h-[88px] w-full fixed top-0 left-0 z-50 flex items-center justify-around gap-30 px-15 py-10 text-white">
             <div class="h-[70px] w-[70px] flex items-center justify-around">
                 <img class="cursor-pointer " src="images/ptu.png" alt="">
-                <h2 class="text-3xl text-white leading-4 font-bold cursor-pointer">
+                <h2 class="text-3xl leading-4 font-bold cursor-pointer">
                     PTU<br>
                     <span class="text-sm font-semibold">
                         Amritsar
@@ -47,10 +47,10 @@
         </button>
         </div>
 
-        <div id="text-cont" class="absolute top-1/2 left-10 transform -translate-y-1/2 text-white max-w-xl">
+        <div id="text-cont" class="absolute top-1/2 left-10 transform -translate-y-1/2 text-white max-w-2xl px-20">
 
         <h1 class="text-5xl font-bold leading-tight">
-            Shaping the Future of Engineers
+            Shapping the Future of Engineers
         </h1>
 
         <p class="mt-4 text-lg">
@@ -66,63 +66,70 @@ and industry exposure to help students achieve their dreams and build a successf
         </div>
     </div>
     
-    <section style="padding:100px 20px;">
+    <section id="page2" class="py-[80px] px-[20px] bg-gray-100">
+  <div class="max-w-[1200px] mx-auto">
 
-    <div style="max-width:1200px; margin:auto;">
-
-        <div style="text-align:center; margin-bottom:70px;">
-            <h1 style="font-size:42px; margin:0; font-weight:700; color:#111;">
-                Excellence that Speaks in Rankings
-            </h1>
-            <p style="color:#555; margin-top:15px; font-size:17px; max-width:600px; margin-left:auto; margin-right:auto;">
-                A modern institution delivering global recognition, innovation, and impactful achievements.
-            </p>
-        </div>
-
-        <div style="display:grid; grid-template-columns:1.2fr 1fr 0.8fr; gap:40px; align-items:stretch;">
-
-            <!-- Left CARD -->
-            <div style="background:linear-gradient(135deg,#6366f1,#8b5cf6); color:white; padding:50px; border-radius:25px; box-shadow:0 20px 40px rgba(0,0,0,0.15);">
-                
-                <h2 style="font-size:100px; margin:0; font-weight:800;">#3</h2>
-                <p style="font-size:18px; margin-top:10px;">Top Universities in Punjab</p>
-
-                <p style="font-size:12px; opacity:0.8; margin-top:40px;">
-                    NIRF Ranking
-                </p>
-            </div>
-
-            <!-- Centre CARD -->
-            <div style="background:rgba(255,255,255,0.7); backdrop-filter:blur(12px); padding:35px; border-radius:25px; box-shadow:0 10px 30px rgba(0,0,0,0.08); display:flex; flex-direction:column; justify-content:center;">
-                
-                <h3 style="margin-top:0; font-size:22px;">Global Recognition</h3>
-                <p style="color:#555; font-size:15px; line-height:1.6;">
-                    Ranked among the leading institutions globally with continuous academic excellence and innovation.
-                </p>
-
-                <button style="margin-top:20px; padding:12px 22px; border:none; border-radius:30px; background:#6366f1; color:white; cursor:pointer; width:fit-content;">
-                    Explore →
-                </button>
-            </div>
-
-            <!-- RIGHT CARDS -->
-            <div style="display:flex; flex-direction:column; gap:30px;">
-
-                <div style="background:white; padding:30px; border-radius:20px; box-shadow:0 8px 25px rgba(0,0,0,0.08);">
-                    <h3 style="margin:0; font-size:30px; color:#6366f1;">B</h3>
-                    <p style="margin:8px 0 0; color:#666;">NAAC Accreditation</p>
-                </div>
-
-                <div style="background:white; padding:30px; border-radius:20px; box-shadow:0 8px 25px rgba(0,0,0,0.08);">
-                    <h3 style="margin:0; font-size:30px; color:#6366f1;">Top 120</h3>
-                    <p style="margin:8px 0 0; color:#666;">TOP ENGINEERING COLLEGES NATIONALLY</p>
-                </div>
-            </div>
-        </div>
+    <!-- Heading -->
+    <div class="text-center mb-[70px]">
+      <h1 class="text-[42px] font-[700] text-[#111]">
+        Excellence that Speaks in Rankings
+      </h1>
+      <p class="text-[#555] mt-[15px] text-[17px] max-w-[600px] mx-auto">
+        A modern institution delivering global recognition, innovation, and impactful achievements.
+      </p>
     </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-[1.2fr_1fr_0.8fr] gap-[40px] items-stretch">
+
+      <!-- LEFT CARD -->
+      <div id="left-card" class="bg-gradient-to-br from-indigo-500 to-purple-500 text-white p-[50px] rounded-[25px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] transition duration-300 hover:scale-[1.02]">
+        <h2 class="text-[100px] font-[800] leading-none">#3</h2>
+        <p class="text-[18px] mt-[10px]">Top Universities in Punjab</p>
+
+        <p class="text-[12px] opacity-80 mt-[40px]">
+          NIRF Ranking
+        </p>
+      </div>
+
+      <!-- CENTER CARD -->
+      <div id="center-card" class=" bg-white/70 backdrop-blur-md p-[35px] rounded-[25px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] flex flex-col justify-center transition duration-300 hover:shadow-xl">
+        <h3 class="text-[22px] font-semibold">Global Recognition</h3>
+
+        <p class="text-[#555] text-[15px] leading-[1.6] mt-2">
+          Ranked among the leading institutions globally with continuous academic excellence and innovation.
+        </p>
+
+        <button class="mt-[20px] px-[22px] py-[12px] rounded-lg bg-indigo-500 text-white w-fit transition duration-300 hover:bg-indigo-600 hover:scale-105">
+          Explore →
+        </button>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="flex flex-col gap-[30px]">
+
+        <!-- CARD 1 -->
+        <div id="right-card1" class=" bg-white p-[30px] rounded-[20px] shadow-[0_8px_25px_rgba(0,0,0,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-[30px] text-indigo-500 font-semibold">B</h3>
+          <p class="mt-[8px] text-[#666]">NAAC Accreditation</p>
+        </div>
+
+        <!-- CARD 2 -->
+        <div id="right-card2" class=" bg-white p-[30px] rounded-[20px] shadow-[0_8px_25px_rgba(0,0,0,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-[30px] text-indigo-500 font-semibold">Top 120</h3>
+          <p class="mt-[8px] text-[#666]">
+            TOP ENGINEERING COLLEGES NATIONALLY
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
