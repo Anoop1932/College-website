@@ -31,8 +31,8 @@ setInterval(() => {
 
 
 gsap.from(".banner",{
-  y:-10,
   opacity:0,
+  delay:0.2,
   duration:1
   
 
@@ -41,6 +41,25 @@ gsap.from(".section-1",{
   opacity:0,
   duration:1,
   delay:0.2
+  
+
+})
+
+gsap.from("#text-cont h1",{
+  y:10,
+  opacity:0,
+  duration:1,
+  stagger:0.2,
+  delay:0.5
+  
+
+})
+gsap.from("#text-cont p",{
+  y:10,
+  opacity:0,
+  duration:1,
+  stagger:0.2,
+  delay:0.5
   
 
 })
