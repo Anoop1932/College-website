@@ -4,6 +4,62 @@ const totalSlides = slider.children.length;
 const nav = document.querySelector(".banner");
 const h1 = document.querySelector(".banner h2");
 const li = document.querySelectorAll("li");
+
+const crsr = document.querySelector(".cursor");
+
+window.addEventListener("mousemove", (e) => {
+  gsap.to(crsr, {
+    x: e.clientX,
+    y: e.clientY,
+    duration: 0.5,
+    ease: "power2.out"
+  });
+});
+
+
+const links = document.querySelectorAll("a, button,#left-card,#center-card,#right-card1,#right-card2,#page4 #mission-card,#page4 #vision-card");
+
+links.forEach(el => {
+  el.addEventListener("mouseenter", () => {
+    gsap.to(crsr, {
+      scale: 2,
+      backgroundColor: "transparent",
+      border:"1px solid red",
+      duration: 0.3
+    });
+  });
+
+  el.addEventListener("mouseleave", () => {
+    gsap.to(crsr, {
+      scale: 1,
+      backgroundColor: "red",
+      border:"none",
+      duration: 0.3
+    });
+  });
+});
+
+
+
+gsap.set(crsr, { opacity: 0 });
+
+// Mouse enter page
+document.addEventListener("mouseenter", () => {
+  gsap.to(crsr, {
+    opacity: 1,
+    duration: 0.3
+  });
+});
+
+// Mouse leave page
+document.addEventListener("mouseleave", () => {
+  gsap.to(crsr, {
+    opacity: 0,
+    duration: 0.3
+  });
+});
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 setInterval(() => {
