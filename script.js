@@ -115,28 +115,26 @@ window.addEventListener("scroll", function () {
 gsap.from("#left-card, #center-card,#right-card1, #right-card2 ", {
   y: 220,
   opacity: 0,
-  duration:0.5,
-  delay:1,
+  duration:0.8,
+  delay:0.4,
   scrollTrigger: {
     trigger: "#page2",
-    start: "top 80%",
-    end: "top 40%",
-    stagger:0.2,
-    ease:"power3.out",
-    scrub: 1
+    start: "top 50%",
+    end: "top 90%"
   }
 });
 
 
 
-gsap.from("#page2 h1", {
+gsap.from("#page2 h1, #page2 h2", {
   y: 40,
   opacity: 0,
   duration: 1,
   ease: "power2.out",
   scrollTrigger: {
     trigger: "#page2",
-    start: "top 85%"
+    start: "top 50%",
+    end:"top 90%"
   }
 });
 
@@ -147,32 +145,40 @@ gsap.from("#page2 p", {
   delay: 0.2,
   scrollTrigger: {
     trigger: "#page2",
-    start: "top 85%",
-    end:"top 60%"
+    start: "top 50%",
+    end:"top 90%",
   }
 });
 
 gsap.from("#page3 img", {
-  y: 8,
-  duration:0.5,
+  x: -120,
+  duration:0.2,
   opacity: 0,
   scrollTrigger: {
     trigger: "#page3 img",
-    start: "top 90%",
-    end: "top 80%",
-    scrub: 1,
-    ease:"power2.out"
+    start: "top 50%",
+    end: "top 70%"
   }
 });
 
 gsap.from("#page3 h2, #page3 p", {
-  y: 40,
+  y: 100,
   opacity: 0,
-  duration: 1,
   ease: "power2.out",
   scrollTrigger: {
     trigger: "#page3",
-    start: "top 85%"
+    start: "top 60%",
+    end:"top 80%"
+  }
+});
+gsap.from("#page3 h1", {
+  scale: 3,
+  opacity: 0,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#page3",
+    start: "top 30%",
+    end:"top 90%"
   }
 });
 
