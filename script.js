@@ -7,7 +7,8 @@ const li = document.querySelectorAll("li");
 
 const crsr = document.querySelector(".cursor");
 
-window.addEventListener("mousemove", (e) => {
+const cursorAnimation = ()=>{
+  window.addEventListener("mousemove", (e) => {
   gsap.to(crsr, {
     x: e.clientX,
     y: e.clientY,
@@ -38,12 +39,15 @@ links.forEach(el => {
     });
   });
 });
+}
+
+cursorAnimation();
 
 
 
-gsap.set(crsr, { opacity: 0 });
+const cursorOpacity = ()=>{
+  gsap.set(crsr, { opacity: 0 });
 
-// Mouse enter page
 document.addEventListener("mouseenter", () => {
   gsap.to(crsr, {
     opacity: 1,
@@ -51,13 +55,14 @@ document.addEventListener("mouseenter", () => {
   });
 });
 
-// Mouse leave page
 document.addEventListener("mouseleave", () => {
   gsap.to(crsr, {
     opacity: 0,
     duration: 0.3
   });
 });
+}
+cursorOpacity();
 
 
 gsap.registerPlugin(ScrollTrigger);
