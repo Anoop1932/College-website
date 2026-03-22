@@ -210,18 +210,67 @@ animations();
 
 
   
-gsap.from("#page4 #mission-card, #vision-card", {
-  y: 200,
+gsap.from("#page4 #mission-card", {
+  x: 120,
   opacity: 0,
-  duration:1,
-  delay:1.5,
+  duration:0.8,
   scrollTrigger: {
-    trigger: "#page4 #mission-card",
+    trigger: "#page4",
     scrub:0.1,
-    start: "top 80%",
-    end: "top 70%",
+    start: "top 50%",
+    end: "top 90%",
     ease: "power2.out"
   }
 });
+
+gsap.from("#page4 #vision-card", {
+  x: -120,
+  opacity: 0,
+  duration:0.8,
+  scrollTrigger: {
+    trigger: "#page4",
+    scrub:0.1,
+    start: "top 50%",
+    end: "top 90%",
+    ease: "power2.out"
+  }
+});
+
+gsap.from("#page4 h1", {
+  x: -120,
+  opacity: 0,
+  duration:1.5,
+  scrollTrigger: {
+    trigger: "#page4",
+    scrub:2,
+    start: "top 50%",
+    end: "top 90%",
+    ease: "power2.out"
+  }
+});
+gsap.from("#page4 p", {
+  x: 120,
+  opacity: 0,
+  duration:1.5,
+  scrollTrigger: {
+    trigger: "#page4",
+    scrub:2,
+    start: "top 50%",
+    end: "top 90%",
+    ease: "power2.out"
+  }
+});
+
+
+
+
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
 
 
