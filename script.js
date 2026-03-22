@@ -116,7 +116,7 @@ const animations = ()=>{
     gsap.from("#left-card", {
   x: -120,
   opacity: 0,
-  duration:0.2,
+  duration:0.8,
   scrollTrigger: {
     trigger: "#page2 #left-card",
     scrub:0.1,
@@ -127,7 +127,7 @@ const animations = ()=>{
 gsap.from("#center-card,#right-card1, #right-card2 ", {
   x: 120,
   opacity: 0,
-  duration:0.2,
+  duration:0.8,
   scrollTrigger: {
     trigger: "#page2",
     scrub:0.1,
