@@ -113,12 +113,16 @@ window.addEventListener("scroll", function () {
 
 
 gsap.from("#left-card, #center-card,#right-card1, #right-card2 ", {
-  y: 110,
+  y: 220,
   opacity: 0,
+  duration:0.5,
+  delay:1,
   scrollTrigger: {
     trigger: "#page2",
     start: "top 80%",
-    end: "top 50%",
+    end: "top 40%",
+    stagger:0.2,
+    ease:"power3.out",
     scrub: 1
   }
 });
