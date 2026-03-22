@@ -121,7 +121,8 @@ const animations = ()=>{
     trigger: "#page2 #left-card",
     scrub:0.1,
     start: "top 80%",
-    end: "top 80%"
+    end: "top 80%",
+    ease: "power2.out"
   }
 });
 gsap.from("#center-card,#right-card1, #right-card2 ", {
@@ -132,7 +133,8 @@ gsap.from("#center-card,#right-card1, #right-card2 ", {
     trigger: "#page2",
     scrub:0.1,
     start: "top 50%",
-    end: "top 90%"
+    end: "top 90%",
+    ease: "power2.out"
   }
 });
 
@@ -142,12 +144,12 @@ gsap.from("#page2 h1, #page2 h2", {
   y: 120,
   opacity: 0,
   duration: 1,
-  ease: "power2.out",
   scrollTrigger: {
     trigger: "#page2",
     scrub:2,
     start: "top 50%",
-    end:"top 90%"
+    end:"top 90%",
+    ease: "power2.out"
   }
 });
 
@@ -161,6 +163,7 @@ gsap.from("#page2 p", {
     scrub:2,
     start: "top 50%",
     end:"top 90%",
+    ease: "power2.out"
   }
 });
 
@@ -172,35 +175,53 @@ gsap.from("#page3 img", {
     trigger: "#page3 img",
     scrub:2,
     start: "top 50%",
-    end: "top 70%"
+    end: "top 70%",
+    ease: "power2.out"
   }
 });
 
 gsap.from("#page3 h2, #page3 p", {
   y: 100,
   opacity: 0,
-  ease: "power2.out",
   scrollTrigger: {
     trigger: "#page3",
     scrub:2,
     start: "top 60%",
-    end:"top 80%"
+    end:"top 80%",
+    ease: "power2.out"
   }
 });
 gsap.from("#page3 h1", {
   scale: 3,
   opacity: 0,
-  ease: "power2.out",
   scrollTrigger: {
     trigger: "#page3",
     scrub:2,
     start: "top 30%",
-    end:"top 90%"
+    end:"top 90%",
+    ease: "power2.out"
   }
 });
 
 }
 
 animations();
+
+
+
+  
+gsap.from("#page4 #mission-card, #vision-card", {
+  y: 200,
+  opacity: 0,
+  duration:1,
+  delay:1.5,
+  scrollTrigger: {
+    trigger: "#page4 #mission-card",
+    scrub:0.1,
+    start: "top 80%",
+    end: "top 70%",
+    ease: "power2.out"
+  }
+});
 
 
