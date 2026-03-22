@@ -31,7 +31,7 @@ setInterval(() => {
 
   })
 
-}, 4000); 
+}, 3000); 
 
 
 gsap.from(".banner",{
@@ -50,20 +50,22 @@ gsap.from(".section-1",{
 })
 
 gsap.from("#text-cont h1",{
-  y:14,
+  y:50,
   opacity:0,
   duration:1,
   stagger:0.1,
-  delay:0.7
+  delay:0.7,
+  scrub:2
   
 
 })
 gsap.from("#text-cont p",{
-  y:14,
+  y:50,
   opacity:0,
   duration:1,
   stagger:0.1,
-  delay:0.7
+  delay:0.7,
+  scrub:2
   
 
 })
@@ -110,15 +112,25 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
-
-gsap.from("#left-card, #center-card,#right-card1, #right-card2 ", {
-  y: 220,
+const animations = ()=>{
+    gsap.from("#left-card", {
+  x: -120,
   opacity: 0,
-  duration:0.8,
-  delay:0.4,
+  duration:0.2,
+  scrollTrigger: {
+    trigger: "#page2 #left-card",
+    scrub:0.1,
+    start: "top 80%",
+    end: "top 80%"
+  }
+});
+gsap.from("#center-card,#right-card1, #right-card2 ", {
+  x: 120,
+  opacity: 0,
+  duration:0.2,
   scrollTrigger: {
     trigger: "#page2",
+    scrub:0.1,
     start: "top 50%",
     end: "top 90%"
   }
@@ -127,24 +139,26 @@ gsap.from("#left-card, #center-card,#right-card1, #right-card2 ", {
 
 
 gsap.from("#page2 h1, #page2 h2", {
-  y: 40,
+  y: 120,
   opacity: 0,
   duration: 1,
   ease: "power2.out",
   scrollTrigger: {
     trigger: "#page2",
+    scrub:2,
     start: "top 50%",
     end:"top 90%"
   }
 });
 
 gsap.from("#page2 p", {
-  y: 20,
+  y: 120,
   opacity: 0,
   duration: 1,
   delay: 0.2,
   scrollTrigger: {
     trigger: "#page2",
+    scrub:2,
     start: "top 50%",
     end:"top 90%",
   }
@@ -156,6 +170,7 @@ gsap.from("#page3 img", {
   opacity: 0,
   scrollTrigger: {
     trigger: "#page3 img",
+    scrub:2,
     start: "top 50%",
     end: "top 70%"
   }
@@ -167,6 +182,7 @@ gsap.from("#page3 h2, #page3 p", {
   ease: "power2.out",
   scrollTrigger: {
     trigger: "#page3",
+    scrub:2,
     start: "top 60%",
     end:"top 80%"
   }
@@ -177,8 +193,14 @@ gsap.from("#page3 h1", {
   ease: "power2.out",
   scrollTrigger: {
     trigger: "#page3",
+    scrub:2,
     start: "top 30%",
     end:"top 90%"
   }
 });
+
+}
+
+animations();
+
 
